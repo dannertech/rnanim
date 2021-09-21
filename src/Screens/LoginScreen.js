@@ -30,13 +30,15 @@ const LoginScreen = () => {
         >
             
             <Animated.Image source={require('../Images/tesla-shadow-logo.png')} style={{opacity: fade,width: 250, height: 250, alignSelf: 'center', marginTop: 70}}/>
-            <Animated.View style={{transform: [{translateX: xPosition}]}}>
+            <Animated.View style={{marginTop: 30, transform: [{translateX: xPosition}]}}>
             <TextInput placeholder="Email" style={{backgroundColor: 'white', borderWidth: 2, borderRadius: 10, height: 40, width: '90%', marginLeft: 210}}/>
             <TextInput placeholder="Password" style={{backgroundColor: 'white', borderWidth: 2, borderRadius: 10, marginTop: 30, width: '90%', height: 40, marginLeft: 210}}/>
             </Animated.View>
-            <TouchableOpacity>
-                <Text>Login</Text>
+            <Animated.View style={{opacity: fade, alignSelf: 'center', width: 200, marginTop: 50}}>
+            <TouchableOpacity style={{backgroundColor: '#B71C1C', height: 45, justifyContent: 'center', borderRadius: 10}}>
+                <Text style={{color: 'white', fontSize: 20, fontWeight: 'bold', textAlign: 'center'}}>Login</Text>
             </TouchableOpacity>
+            </Animated.View>
         </Animated.View>
     )
 };
