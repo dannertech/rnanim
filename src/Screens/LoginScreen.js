@@ -1,4 +1,4 @@
-import {StyleSheet, Animated, Text, View, TextInput} from 'react-native';
+import {StyleSheet, Animated, Text, View, TextInput, Image} from 'react-native';
 import React, {useEffect, useRef} from 'react';
 
 const LoginScreen = () => {
@@ -15,12 +15,12 @@ const LoginScreen = () => {
     return(
         <Animated.View
         style={{
-            opacity=fade
+            opacity: fade
         }}
         >
-            <Image source={require('../Images/tesla-shadow-logo.png')} />
-            <TextInput placeholder="Email" />
-            <TextInput placeholder="Password" />
+            <Image source={require('../Images/tesla-shadow-logo.png')} style={{width: 250, height: 250, alignSelf: 'center', marginTop: 70}}/>
+            <TextInput placeholder="Email" style={{borderWidth: 2, borderRadius: 10, height: 40, marginHorizontal: 10}}/>
+            <TextInput placeholder="Password" style={{borderWidth: 2, borderRadius: 10, marginTop: 30, height: 40, marginHorizontal: 10}}/>
         </Animated.View>
     )
 };
